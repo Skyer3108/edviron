@@ -8,7 +8,7 @@ const db=require('./db')
 const userRouter = require('./Routes/userRouter')
 const transactionRouter = require('./Routes/transactionRoute')
 const statusRoute = require('./Routes/statusRoute')
-const PORT=4004;
+const PORT=process.env.PORT||4004;
 
 app.use(cors());
 app.use(express.json())
