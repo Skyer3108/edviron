@@ -1,0 +1,55 @@
+.update{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color:#00000090 ;
+    
+}
+.login-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+}
+.status-text{
+    font-size: 20px;
+    font-weight: 700;
+}
+.form{
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    width: 40%;
+      height: 40%;
+     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);;
+}
+.form input{
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.btn-1{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    
+}
+
+.btn-save{
+    background: linear-gradient(180deg, #9c82d0 0%, #442487 100%);
+
+}
+.btn-can{
+    background-color: tomato;
+
+}
