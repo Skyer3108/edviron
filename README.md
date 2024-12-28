@@ -68,7 +68,7 @@ Filter Based on Status
 
 Single Transactions Details by Collect_id
 
-![Screenshot 2024-12-28 150015](https://github.com/user-attachments/assets/538484be-6ff3-4d30-bb98-95b96a2f3b1d)
+![Screenshot 2024-12-28 150154](https://github.com/user-attachments/assets/c51394bb-e9d3-4cd1-b172-094fe51c90de)
 
 
 
