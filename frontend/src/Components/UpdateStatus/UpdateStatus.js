@@ -2,6 +2,8 @@ import { useActionState, useContext, useState } from 'react'
 import './update.css'
 import { StoreContext } from '../../Context/StoreContext'
 import axios from 'axios'
+import React from 'react';
+
 
 const UpdateState = ({handleUpdate}) => {
 

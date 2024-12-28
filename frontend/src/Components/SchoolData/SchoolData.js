@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 import { StoreContext } from "../../Context/StoreContext"
 import axios from "axios"
 import './school.css'
+import React from 'react';
+
 const SchoolData=()=>{
 
     const {url}=useContext(StoreContext)

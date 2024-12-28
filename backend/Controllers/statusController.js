@@ -1,6 +1,7 @@
 const statusSchema=require('../Schema/statusSchema')
 
 
+
 const getDeatils=async(req,res)=>{
 
     const {collect_id}=req.params
