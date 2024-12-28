@@ -1,0 +1,2 @@
+# Payment History MERN Project
+The Payment History project is a web application built using the MERN stack (MongoDB, Express, React, Node.js). The application allows users to view and manage their payment history, including details such as payments, amounts, and status. The project provides a user-friendly interface for tracking payments and is fully functional with a backend and a deployed frontend.
