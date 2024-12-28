@@ -33,7 +33,7 @@ function App() {
 
   },[])
 
-  let one=1
+ 
   return (
     <div className="App">
 
