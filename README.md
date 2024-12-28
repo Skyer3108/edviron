@@ -53,6 +53,24 @@ The application has been deployed and can be accessed at the following link:
 
 
  # API Endpoints
+ Login API :
+  /api/user/login
+
+ Register API:
+  /api/user/register
+
+Transactions API :
+All Transactions
+  /api/transaction/get-all-transactions
+
+Custom Order Id Details
+
+/api/transaction-status/:custom_order_id
+
+Deatail API  :
+Deatils form School Id:
+
+/api/details/status/:collect_id
 
  
 
