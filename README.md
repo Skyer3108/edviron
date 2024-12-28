@@ -52,6 +52,23 @@ The application has been deployed and can be accessed at the following link:
  Login 
  ![Screenshot 2024-12-28 145601](https://github.com/user-attachments/assets/ebced376-3bad-437e-9c6d-67e00488b2a1)
 
+ Register
+ ![Screenshot 2024-12-28 145624](https://github.com/user-attachments/assets/7a056ba2-7ff6-4b3e-9a05-e6baf57730cf)
+
+ Transactions
+ ![Screenshot 2024-12-28 145920](https://github.com/user-attachments/assets/4e05adc4-c434-4e98-96e4-fdc2fb36b014)
+
+ ![Screenshot 2024-12-28 150335](https://github.com/user-attachments/assets/3d7c3b8f-36a7-4e95-a0b5-907ff5f8baed)
+
+Check Status By Custom ID
+ ![Screenshot 2024-12-28 145944](https://github.com/user-attachments/assets/93f82f87-19bd-45d1-bd35-4e015faffc71)
+
+Filter Based on Status
+![Screenshot 2024-12-28 150015](https://github.com/user-attachments/assets/b8d26317-7f22-4ed4-b692-255fe918a3eb)
+
+Single Transactions Details by Collect_id
+
+![Screenshot 2024-12-28 150015](https://github.com/user-attachments/assets/538484be-6ff3-4d30-bb98-95b96a2f3b1d)
 
 
 
