@@ -60,15 +60,16 @@ The application has been deployed and can be accessed at the following link:
   /api/user/register
 
 Transactions API :
-All Transactions
+All Transactions API :
   /api/transaction/get-all-transactions
 
-Custom Order Id Details
+Custom Order Id Details API :
 
 /api/transaction-status/:custom_order_id
 
 Deatail API  :
-Deatils form School Id:
+
+Deatils form School Id API:
 
 /api/details/status/:collect_id
 
