@@ -165,3 +165,114 @@ button {
     font-size: 20px;
     font-weight: 500;
   }
+
+
+  /* Keyframes for hover animation */
+@keyframes hoverEffect {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* General Keyframe for smooth fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Screen Styling */
+@media (max-width: 768px) {
+    .main-trans {
+        height: auto; /* Adjust height */
+        padding: 10px;
+        border: none; /* Simplify for mobile */
+    }
+
+    .main {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f0f8ff;
+    }
+
+    .head {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .btn-log {
+        width: 80px;
+        height: 35px;
+        font-size: 12px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .filter select {
+        width: 100%;
+        margin-top: 10px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .head-name {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .serach {
+        flex-direction: column;
+        gap: 10px; /* Space between items */
+    }
+
+    .serach input {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .list-head {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjust grid for mobile */
+        font-size: 14px;
+    }
+
+    .list-data {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Match list-head */
+        font-size: 14px;
+        animation: fadeIn 0.5s ease-in-out; /* Apply fade-in */
+    }
+
+    .pagi {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        width: auto;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .message {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .school:hover + .message {
+        animation: hoverEffect 0.3s ease-in-out; /* Add smooth scale effect */
+    }
+
+    .school:hover {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4caf50;
+    }
+}

@@ -28,3 +28,75 @@
     color: black;
 
 }
+
+/* Keyframes for Smooth Appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* General Styling */
+.school-details {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+.container {
+    text-align: center;
+    width: 60%;
+    height: 60%;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    padding: 20px; /* Added padding for better spacing */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 800;
+    color: #333333; /* Darker color for better readability */
+    margin-bottom: 20px;
+}
+
+.detail {
+    font-size: 20px;
+    font-weight: 600;
+    color: #555555; /* Neutral gray for subtler details */
+    margin: 10px 0;
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjusted to fit smaller screens */
+        height: auto; /* Dynamic height for better fit */
+        padding: 15px; /* Reduced padding for smaller devices */
+    }
+
+    .heading {
+        font-size: 24px; /* Reduced size for mobile */
+    }
+
+    .detail {
+        font-size: 16px; /* Reduced size for mobile */
+        margin: 8px 0;
+    }
+}
+
+/* Hover Effects */
+.container:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
