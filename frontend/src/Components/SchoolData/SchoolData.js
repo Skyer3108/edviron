@@ -5,49 +5,72 @@ import axios from "axios"
 import './school.css'
 import React from 'react';
 
-const SchoolData=()=>{
+const SchoolData = () => {
 
-    const {url}=useContext(StoreContext)
+    const { url } = useContext(StoreContext)
 
-    const {collect_id}=useParams()
-    const [details,setDetails]=useState(null)
+    const { collect_id } = useParams()
+    const [details, setDetails] = useState(null)
+    const [token, setToken] = useState('')
     console.log(collect_id)
 
-    const fetchDetails=async()=>{
+    const fetchDetails = async () => {
 
-        const res=await axios.get(`${url}/api/details/status/${collect_id}`)
+        try {
 
-        console.log(res.data.data[0])
-        setDetails(res.data.data[0])
+            const authToken = localStorage.getItem('authToken');
+            if (!authToken) {
+                console.error("Auth token missing");
+                return;
+            }
+
+
+            const res = await axios.get(`${url}/api/details/status/${collect_id}`, {
+                headers:authToken
+            })
+
+            console.log(res.data.data[0])
+            setDetails(res.data.data[0])
+
+        } catch (err) {
+            console.error("Error fetching details:", err.message);
+        }
+
+
 
     }
 
-    useEffect(()=>{
-        
+
+
+    useEffect(() => {
+
+
 
         fetchDetails()
 
-    },[collect_id])
+    }, [collect_id])
+
+
 
     if (details === null) {
-        return <div>Loading...</div> 
-      }
+        return <div>Loading...</div>
+    }
 
-    return(
+    return (
         <div className="school-details">
-<div className="container">
+            <div className="container">
 
-     <p className="heading">Transaction Detail of {collect_id}</p> 
+                <p className="heading">Transaction Detail of {collect_id}</p>
 
-    <p className="detail">Payment Method:{details.payment_method}</p>
-    <p className="detail">Gateway : {details.gateway}</p>
-    <p className="detail">Status : {details.status}</p>
-    <p className="detail">Transaction Amount : {details.transaction_amount}</p> 
-            
-            
-            <p className="detail">Bank Reference : {details.bank_refrence}</p>
+                <p className="detail">Payment Method:{details.payment_method}</p>
+                <p className="detail">Gateway : {details.gateway}</p>
+                <p className="detail">Status : {details.status}</p>
+                <p className="detail">Transaction Amount : {details.transaction_amount}</p>
 
-</div>
+
+                <p className="detail">Bank Reference : {details.bank_refrence}</p>
+
+            </div>
         </div>
     )
 

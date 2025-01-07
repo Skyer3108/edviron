@@ -1,4 +1,4 @@
-import { useActionState, useContext, useState } from 'react'
+import { useActionState, useContext, useEffect, useState } from 'react'
 import './update.css'
 import { StoreContext } from '../../Context/StoreContext'
 import axios from 'axios'
@@ -14,15 +14,28 @@ const UpdateState = ({handleUpdate}) => {
     const [showStatus,setShowStatus]=useState(false)
 
     const [data,setData]=useState('')
+
+    const [token,setToken]=useState('')
     const handleStatus=async()=>{
 
-        const res=await axios.get(`${url}/api/transaction/get/tranaction-status/${Coustum}`)
+        const res=await axios.get(`${url}/api/transaction/get/tranaction-status/${Coustum}`,{
+            headers:token
+        })
 
           console.log(res.data.data)
           setData(res.data.data)
 
 
     }
+
+    useEffect(()=>{
+        const authToken=localStorage.getItem('authToken')
+
+        if(authToken){
+
+            setToken(authToken)
+        }
+    })
 
 
     return (
