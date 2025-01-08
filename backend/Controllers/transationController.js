@@ -8,6 +8,7 @@ const getAllTransactions=async(req,res)=>{
     try{
 
         const transactions=await transactionSchema.find()
+        console.log(transactions)
 
         return res.send({
             status:200,

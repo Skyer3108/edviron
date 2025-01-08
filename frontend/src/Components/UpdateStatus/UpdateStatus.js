@@ -19,7 +19,9 @@ const UpdateState = ({handleUpdate}) => {
     const handleStatus=async()=>{
 
         const res=await axios.get(`${url}/api/transaction/get/tranaction-status/${Coustum}`,{
-            headers:token
+            headers:{
+                token
+            }
         })
 
           console.log(res.data.data)

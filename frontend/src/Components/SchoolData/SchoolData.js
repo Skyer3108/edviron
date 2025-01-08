@@ -11,7 +11,7 @@ const SchoolData = () => {
 
     const { collect_id } = useParams()
     const [details, setDetails] = useState(null)
-    const [token, setToken] = useState('')
+    
     console.log(collect_id)
 
     const fetchDetails = async () => {
@@ -19,6 +19,7 @@ const SchoolData = () => {
         try {
 
             const authToken = localStorage.getItem('authToken');
+            console.log(authToken)
             if (!authToken) {
                 console.error("Auth token missing");
                 return;
@@ -26,9 +27,14 @@ const SchoolData = () => {
 
 
             const res = await axios.get(`${url}/api/details/status/${collect_id}`, {
-                headers:authToken
+                headers: {
+                   token:authToken
+                }
             })
 
+        
+
+            console.log(res)
             console.log(res.data.data[0])
             setDetails(res.data.data[0])
 
